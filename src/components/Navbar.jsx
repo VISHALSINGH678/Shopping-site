@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {Link, useLocation, useNavigate} from 'react-router-dom'
 import { items } from './Data'
+import { BsFillCartCheckFill } from 'react-icons/bs'
 
 const Navbar = ({setData, cart}) => {
   const location = useLocation()
@@ -36,7 +37,7 @@ const Navbar = ({setData, cart}) => {
 
             <Link to="/cart" className="cart">
             <button type="button" className="btn btn-primary position-relative">
-  Cart
+  <BsFillCartCheckFill />
   <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
     {cart.length}
     <span className="visually-hidden">unread messages</span>
@@ -47,7 +48,7 @@ const Navbar = ({setData, cart}) => {
 
         {
           location.pathname == '/' && (
-            
+
         <div className="nav-bar-wrapper">
             <div className="items">Filter by {"->"}</div>
             <div onClick={()=>setData(items)} className="items">NO Filter</div>
