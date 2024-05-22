@@ -13,12 +13,12 @@ const App = () => {
   return (
     <>
     <Router>
-      <Navbar setData={setData}/>
+      <Navbar cart={cart} setData={setData}/>
       <Routes>
         <Route path='/' element={<Product cart={cart} setCart={setCart} items={data} />}/>
         <Route path='/product/:id' element={<ProductDetails/>}/>
         <Route path='/search/:term' element={<SearchItem/>}/>
-        <Route path='/cart' element={<Cart/>}/>
+        <Route path='/cart' element={<Cart cart={cart} setCart={setCart}/>}/>
       </Routes>
     </Router>
     </>
