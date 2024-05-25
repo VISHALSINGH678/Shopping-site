@@ -11,35 +11,11 @@ function Product({items, cart, setCart}) {
       id, price, title, description, imgSrc
     }
     setCart([...cart, obj])
-    toast.success('🦄 Wow so easy!', {
-      position: "top-right",
-      autoClose: 1500,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-      transition: Bounce,
-      });
   }
 
 
   return (
     <>
-    <ToastContainer
-position="top-right"
-autoClose={1500}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="dark"
-transition: Bounce
-/>
       <div className="container my-5">
         <div className="row">
           {items.map((Products) => {

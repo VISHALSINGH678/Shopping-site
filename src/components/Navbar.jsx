@@ -33,6 +33,7 @@ const Navbar = ({setData, cart}) => {
 
             <form onSubmit={handleSubmit} className="search-bar">
                 <input value={searchTerm} onChange={(e)=>setSearchTerm(e.target.value)} type="text" placeholder='Search-Products' />
+                <button className="btn btn-primary mx-3" style={{width:'6rem'}}>Search</button>
             </form>
 
             <Link to="/cart" className="cart">
